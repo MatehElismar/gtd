@@ -1,0 +1,7 @@
+{
+  "name": "gtd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
