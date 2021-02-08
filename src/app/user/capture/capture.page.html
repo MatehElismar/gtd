@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Step 1: Capture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="8" offset-md="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-row>
+              <ion-col size="10">
+                <ion-card-title>Ideas & Tasks</ion-card-title>
+                <ion-card-subtitle
+                  >Put in here all the ideas or tasks you have in mind
+                </ion-card-subtitle>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button (click)="showTaskForm()">
+                  <ion-icon slot="icon-only" name="add"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let task of tasks">
+                <ion-label
+                  >{{task.name}}
+                  <p>{{task.description}}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

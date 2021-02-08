@@ -1,0 +1,81 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <div class="content">
+          <div class="title">
+            <h1 class="ion-text-center">GTD & Pomodoro System</h1>
+            <h2 *ngIf="!recover">Login</h2>
+            <h2 *ngIf="recover">Recover Password</h2>
+          </div>
+
+          <form class="form" [formGroup]="loginForm">
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                formControlName="email"
+                placeholder="mateh@elismar.com"
+                type="text"
+              />
+              <mat-error>{{formErrors["email"]}}</mat-error>
+            </mat-form-field>
+            <mat-form-field [hidden]="recover" class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" type="password" />
+              <mat-error>{{formErrors["password"]}}</mat-error>
+            </mat-form-field>
+            <div *ngIf="!recover" class="forgot">
+              <ion-label (click)="recover = true">Forgot Password?</ion-label>
+            </div>
+
+            <div *ngIf="recover">
+              <ion-button
+                (click)="forgotPass()"
+                expand="block"
+                fill="clear"
+                shape="round"
+              >
+                Recuperar</ion-button
+              >
+              <div (click)="recover = false" class="home">
+                <ion-label> Go Login </ion-label>
+              </div>
+            </div>
+            <div class="buttons ion-text-center" *ngIf="!recover">
+              <ion-button
+                (click)="logIn('local')"
+                expand="block"
+                fill="clear"
+                shape="round"
+              >
+                Login
+              </ion-button>
+            </div>
+            <div *ngIf="!recover" class="google ion-text-center">
+              <div>
+                <label>Or login with</label>
+              </div>
+              <div>
+                <ion-fab horizontal="center">
+                  <ion-fab-button (click)="logIn('google')">
+                    <img
+                      src="https://img-authors.flaticon.com/google.jpg"
+                      alt=""
+                    />
+                  </ion-fab-button>
+                </ion-fab>
+              </div>
+            </div>
+          </form>
+
+          <div *ngIf="!recover" class="register ion-text-center">
+            <ion-label routerLink="/auth/register">
+              <b>New User?</b> Sign Up
+            </ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

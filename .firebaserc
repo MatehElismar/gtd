@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gtd-project-93688": {
+      "hosting": {
+        "app": [
+          "gtd-project-93688"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.example-full-width {
+  width: 95%;
+}
+
+.buble {
+  background-color: #408ec65b;
+  width: 350px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  left: -140px;
+  top: -130px;
+}
+
+.buble2 {
+  background-color: #7a2048;
+  width: 350px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  left: 140px;
+  top: -165px;
+}
+
+.form {
+  text-align: center !important;
+  padding: 20px 0;
+}
+
+.content {
+  padding: 20vh 0;
+}
+
+.wrap-input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  margin-bottom: 26px;
+  box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+}
+
+input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.2;
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 0 20px 0 23px;
+  border-radius: 20px;
+}
+
+.title {
+  padding-left: 5px;
+}
+
+// .title h1 {
+//   color: #fb3d3d;
+// }
+
+.title h2 {
+  font-weight: 500;
+  font-size: 25px !important;
+  color: #408ec6;
+}
+
+.forgot {
+  text-align: end;
+}
+
+.forgot ion-label {
+  color: #408ec6;
+  padding-right: 10px;
+}
+
+.buttons ion-button {
+  background: #7a2048;
+  color: #fff;
+  border-radius: 20px;
+  // height: 50px;
+  // border: 1px solid #fb3d3d;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+ion-fab-button {
+  --background: #fff !important;
+}
+
+ion-button {
+  background: #7a2048;
+  color: #fff;
+  border-radius: 20px;
+  width: 300px;
+  margin: 0 auto;
+  // height: 50px;
+  // border: 1px solid #fb3d3d;
+}
+
+.home {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15;
+  font-weight: 500;
+}
+
+.google {
+  margin-top: 10px;
+}
+
+ion-fab {
+  margin-top: 5px;
+}
+
+.register {
+  margin-top: 60px;
+  color: #408ec6;
+}
+
+.register b {
+  color: black;
+  font-size: 14px;
+}
+
+::ng-deep
+  app-login
+  .mat-form-field-appearance-legacy
+  .mat-form-field-underline {
+  background-color: #408ec6 !important;
+}
+
+.mat-form-field mat-label {
+  color: black;
+}
